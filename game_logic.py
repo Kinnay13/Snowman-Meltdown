@@ -61,7 +61,22 @@ def play_game():
         print("The snowman melted! The word was:", secret_word)
 
 
+def ask_replay():
+    """Asks the user if they want to play again."""
+    while True:
+        answer = input("Do you want to play again? (y/n): ").lower().strip()
+        if answer == "y":
+            return True
+        if answer == "n":
+            return False
+        print("Please enter 'y' or 'n'.")
+
+
 if __name__ == "__main__":
-    play_game()
+    while True:
+        play_game()
+        if not ask_replay():
+            print("Thanks for playing!")
+            break
 
 
