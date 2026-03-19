@@ -1,3 +1,5 @@
+"""Main game logic for the Snowman Meltdown game."""
+
 import random
 from ascii_art import STAGES
 
@@ -78,5 +80,3 @@ if __name__ == "__main__":
         if not ask_replay():
             print("Thanks for playing!")
             break
-
-
